@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello World</title>
+  <link href='/style.css' rel='stylesheet'>
+</head>
+<body>
+  <h1>Ruang Bangun Persegi</h1>
+
+  <div class="tengah">
+
+    <div class="card">
+      <h1>Ruang Bangun Persegi</h1>
+      <div class="cardbody">
+
+      <form>
+        <label>Nilai Panjang</label>
+           <Input type="text" id="PJ">
+        <label>Nilai Lebar</label>
+          <input type="text" id="LB">
+      </form>
+      
+      <div class="hsl" id="hsl">hasil</div>
+
+      </div>
+      <div class="cardfooter">
+        <button class="btnl1" onclick="hitung()">hitung</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function hitung(){
+      var pj=document.getElementById("PJ").value
+      var lb=document.getElementById("LB").value
+      var luas=pj*lb
+      var res="Hitung Luas Persegi<br>Nilai Panjang"+pj+",dan lebarnya"+lb+"menjadi;<br>Luas=panjang X lebar<br>Luas="+pj+"X "+lb+"<br>Luas="+luas
+      var pjlb = parseInt(pj) + parseInt(lb)
+      var kll=2*(pj+lb)
+      res +="<br><br>Keliling Persegi<br>keliling = 2 X (Panjang+Lebar)"
+      res +="<br>keliling= 2X("+pj+"+"+lb+")"
+      res +="<br>keliling = 2X "+pjlb
+      res +="<br>keliling="+kll
+      document.getElementById("hsl").innerHTML=res
+      
+      }
+  </script>
+
+  </body>
+  </html>
+
+
+
+
+ 
